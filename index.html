@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Project Lobber</title>
+    <link rel="shortcut icon" href="images/BombFavicon.png">
+    <link rel="stylesheet" href="7-31Build/TemplateData/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header id="gameTitle">Project Lobber</header>
+
+        <div id="unity-container" class="unity-desktop">
+            <canvas id="unity-canvas" width=960 height=600></canvas>
+            <div id="unity-loading-bar">
+                <div id="unity-logo"></div>
+                <div id="unity-progress-bar-empty">
+                    <div id="unity-progress-bar-full"></div>
+                </div>
+            </div>
+            <div id="unity-warning"> </div>
+            <div id="unity-footer">
+                <div id="unity-webgl-logo"></div>
+                <div id="unity-fullscreen-button"></div>
+                <div id="unity-build-title">July 31, 2022 Build</div>
+            </div>
+        </div>
+
+        <section id="topHalf">
+            <div class="bombs"></div>
+        </section>
+
+        <div class="transition"></div>
+
+        <div class="updateLog">
+            <div class="updateLogProperties">
+                <div class="updateLogText">
+                    <h2 id="logTitle">Update Log</h2>
+
+                    <p id="updateDates">7-31-2022</p>
+                    <div id="updateDetails">Completed the digging down animation, the digging out animation (digging down but backwards), and the underground animation (invisible mole). Completed the animation logic for the mole and also added borders that kill the player if they reach them (they are out of bounds).</div>
+                    <img class="logImages" src="images/LogImages/7-31(1).png">
+                    <img class="logImages" src="images/LogImages/7-31(2).png">
+                    <img class="logImages" src="images/LogImages/7-31(3).png">
+                    <img class="logImages" src="images/LogImages/7-31(4).png">
+                    
+                    <p id="updateDates">7-30-2022</p>
+                    <div id="updateDetails">Worked on the digging down animation for the mole.</div>
+                    
+                    <p id="updateDates">7-29-2022</p>
+                    <div id="updateDetails">Completed the animation for the mole when it’s above ground.</div>
+                    <img class="logImages" src="images/LogImages/7-29.png">
+
+                    <p id="updateDates">7-28-2022</p>
+                    <div id="updateDetails">Changed all collectables to an OnTriggerEnter system (doesn’t physically collide with the player, but knows when the player overlaps with its hitbox) to stop the halting of the player when collecting items. Worked on the mole animations.</div>
+                    
+                    <p id="updateDates">7-27-2022</p>
+                    <div id="updateDetails">Tortank now has the ability to get “unstuck” (doesn’t affect gameplay). Increased tortank walk animation speed. Updated the webpage with the latest game version and caught up the update log.</div>
+
+                    <p id="updateDates">7-26-2022</p>
+                    <div id="updateDetails">Finished animations for a tortank hiding in its shell and coming out of its shell. Altered the animation scale and bullet creation point to match the animation.</div>
+                    <img class="logImages" src="images/LogImages/7-26(1).png">
+                    <img class="logImages" src="images/LogImages/7-26(2).png">
+                    <img class="logImages" src="images/LogImages/7-26(3).png">
+
+                    <p id="updateDates">7-25-2022</p>
+                    <div id="updateDetails">Finished animation of the tortank going in its shell.</div>
+                    <img class="logImages" src="images/LogImages/7-25.png">
+
+                    <p id="updateDates">7-24-2022</p>
+                    <div id="updateDetails">Created the final sprite and walking animation for the tortoise enemy (now named tortank).</div>
+                    <img class="logImages" src="images/LogImages/7-24.png">
+
+                    <p id="updateDates">7-23-2022</p>
+                    <div id="updateDetails">Finished animations for the jump up and speed up sprites.</div>
+                    <img class="logImages" src="images/LogImages/7-23(1).png">
+                    <img class="logImages" src="images/LogImages/7-23(2).png">
+
+                    <p id="updateDates">7-22-2022</p>
+                    <div id="updateDetails">Finished lob up power up animation.</div>
+                    <img class="logImages" src="images/LogImages/7-22.png">
+
+                    <p id="updateDates">7-21-2022</p>
+                    <div id="updateDetails">Finished “sparkle” effect sprite sheet (can now be applied to all power ups) and applied it to the damage up power up. Started work on lob up power up.</div>
+                    <img class="logImages" src="images/LogImages/7-21(1).png">
+                    <img class="logImages" src="images/LogImages/7-21(2).png">
+
+                    <p id="updateDates">7-20-2022</p>
+                    <div id="updateDetails">Finished damage up power up sprite.</div>
+                    <img class="logImages" src="images/LogImages/7-20.png">
+
+                    <p id="updateDates">7-19-2022</p>
+                    <div id="updateDetails">Animation bug is now fixed (had to uncheck “can transition to self”). Re-organized animation logic tab. Added hovering animation to collectables (shards and power ups). Added knockback animation.</div>
+                    <img class="logImages" src="images/LogImages/7-19(1).png">
+                    <img class="logImages" src="images/LogImages/7-19(2).png">
+                    <img class="logImages" src="images/LogImages/7-19(3).png">
+
+                    <p id="updateDates">7-18-2022</p>
+                    <div id="updateDetails">Player jumping and falling animations completed and semi-implemented. Problem: only the first frame of each animation is playing.</div>
+                    <img class="logImages" src="images/LogImages/7-18(1).png">
+                    <img class="logImages" src="images/LogImages/7-18(2).png">
+
+                    <p id="updateDates">July 9-16</p>
+                    <div id="updateDetails">One week hiatus. Took a trip to Boston. They have great oysters.</div>
+
+                    <p id="updateDates">7-8-2022</p>
+                    <div id="updateDetails">Player idle animation completed. Player running animation completed. Player dashing animation completed.</div>
+                    <img class="logImages" src="images/LogImages/7-8(1).png">
+                    <img class="logImages" src="images/LogImages/7-8(2).png">
+                    <img class="logImages" src="images/LogImages/7-8(3).png">
+
+                    <p id="updateDates">7-7-2022</p>
+                    <div id="updateDetails">Began work on creating a player sprite sheet for animation.</div>
+
+                    <p id="updateDates">7-6-2022</p>
+                    <div id="updateDetails">Updated dash icon and added shards, shard counter, and final shard score on game over screen.</div>
+
+                    <p id="updateDates">7-5-2022</p>
+                    <div id="updateDetails">Added power up indications (blue trail for speed up, big red bomb for damage up, yellow trail and yellow cooldown bar for lob up, and green particles for jump up).</div>
+                    <img class="logImages" src="images/LogImages/7-5(1).png">
+                    <img class="logImages" src="images/LogImages/7-5(2).png">
+
+                    <p id="updateDates">7-3-2022</p>
+                    <div id="updateDetails">Added coins, four power ups (speed boost, jump boost, bomb damage boost, bomb cooldown boost), a bomb cooldown bar, a dash cooldown bar, and the beginnings of a power up indicator system for the UI.</div>
+                    <img class="logImages" src="images/LogImages/7-3(1).png">
+                    <img class="logImages" src="images/LogImages/7-3(2).png">
+
+                    <p id="updateDates">7-2-2022</p>
+                    <div id="updateDetails">Created a parallax background for the game.</div>
+                    <img class="logImages" src="images/LogImages/7-2.png">
+
+                    <p id="updateDates">6-30-2022</p>
+                    <div id="updateDetails">Finished basic tilemap for terrain.</div>
+                    <img class="logImages" src="images/LogImages/6-30.png">
+
+                    <p id="updateDates">6-29-2022</p>
+                    <div id="updateDetails">Started work on a tileset for a tilemap.</div>
+                    <img class="logImages" src="images/LogImages/6-29.png">
+
+                    <p id="updateDates">6-28-2022</p>
+                    <div id="updateDetails">Added glowing text and a custom favicon to the website.</div>
+                    <img class="logImages" src="images/LogImages/6-28(1).png">
+                    <img class="logImages" src="images/LogImages/6-28(2).png">
+                    <img class="logImages" src="images/LogImages/6-28(3).png">
+
+                    <p id="updateDates">6-27-2022</p>
+                    <div id="updateDetails">Fixed a bug where enemies could take damage twice in one hit. Fixed a bug where the tortoise would be “out of its shell” but still invulnerable to attacks.</div>
+
+                    <p id="updateDates">6-26-2022</p>
+                    <div id="updateDetails">Finished the vulture enemy. Vulture enemies fly horizontally toward the player once their AI is enabled and wait for there to be a clear line of sight between itself and the player. If there is, the vulture will divebomb the player
+                        and explode upon contact with anything, dealing heavy damage if the player is caught in the blast.</div>
+                    <img class="logImages" src="images/LogImages/6-26(1).png">
+                    <img class="logImages" src="images/LogImages/6-26(2).png">
+
+                    <p id="updateDates">6-24-2022</p>
+                    <div id="updateDetails">Started work on making the vulture enemy.</div>
+
+                    <p id="updateDates">6-23-2022</p>
+                    <div id="updateDetails">Text and images on the website are now fully responsive to every screen type. The unity game window is still unresponsive, though. Mole enemy completed. Mole starts above ground and digs underground when on screen. The mole then moves
+                        towards the player (it’s invisible) and once it gets close enough, it displays a digging animation (warns the player) and then digs out. If the mole hits the player, the player takes heavy damage (no image will help explain the
+                        mole, try encountering it yourself and see what it does!).</div>
+
+                    <p id="updateDates">6-22-2022</p>
+                    <div id="updateDetails">Fixed knockback to have a fixed angle of knockback (trigonometry came in useful). Started working on mole enemy.</div>
+
+                    <p id="updateDates">6-21-2022</p>
+                    <div id="updateDetails">Added enemy health bars and health drops. Added contact damage with enemies and subsequent knockback that stuns the player. Added pause menu. Added dash mechanic to player movement. Added pause menu and dash tutorial.</div>
+                    <img class="logImages" src="images/LogImages/6-21(1).png">
+                    <img class="logImages" src="images/LogImages/6-21(2).png">
+                    <img class="logImages" src="images/LogImages/6-21(3).png">
+                    <img class="logImages" src="images/LogImages/6-21(4).png">
+
+                    <p id="updateDates">6-20-2022</p>
+                    <div id="updateDetails">Let the tortoise enemy move back and forth on its platform.</div>
+
+                    <p id="updateDates">6-19-2022</p>
+                    <div id="updateDetails">Finished tortoise enemy (tortoises can now shoot back at players when out of their shell). Added a start menu and a game over screen. Added player health loss and death. Added a basic tutorial. Added a player health bar. Cleaned up
+                        the code in all the scripts.</div>
+                    <img class="logImages" src="images/LogImages/6-19(1).png">
+                    <img class="logImages" src="images/LogImages/6-19(2).png">
+                    <img class="logImages" src="images/LogImages/6-19(3).png">
+
+                    <p id="updateDates">6-17-2022</p>
+                    <div id="updateDetails">Added bomb damage and the tortoise enemy’s defense mechanism (hiding in shell for a random interval; black color means the turtle is in its shell and cannot be hurt).</div>
+                    <img class="logImages" src="images/LogImages/6-17.png">
+
+                    <p id="updateDates">6-16-2022</p>
+                    <div id="updateDetails">Successfully uploaded the webpage to the web under the url memesterlii.github.io (this was a prototype website, so the url may have changed by the time someone views this)! Made the web page more compatible with different screen sizes.
+                        Fullscreen button now functioning. Added an explosion force when a bomb explodes, knocking nearby objects away. Allows for a bomb jump that boosts the player up. Added a throwing cooldown on the bombs so the player can’t bomb jump
+                        forever.
+                    </div>
+                    <img class="logImages" src="images/LogImages/6-16(1).png">
+                    <img class="logImages" src="images/LogImages/6-16(2).png">
+
+                    <p id="updateDates">6-15-2022</p>
+                    <div id="updateDetails">Created a small parallax scroll effect for the webpage. Added a sprite for the player. Bombs now rotate when thrown. Fixed sprites clipping with other objects. Added a basic enemy that can take damage (will serve as the framework for
+                        future enemies). Successfully embedded unity game into the web page (chose no compression in the player settings).</div>
+                    <img class="logImages" src="images/LogImages/6-15.png">
+
+                    <p id="updateDates">6-14-2022</p>
+                    <div id="updateDetails">Embedded an earlier build of the Unity game into the website. Unfortunately, it ran into an error. Something about not being hosted on an http web server?</div>
+                    <img class="logImages" src="images/LogImages/6-14.png">
+
+                    <p id="updateDates">6-13-2022</p>
+                    <div id="updateDetails">Stopped trajectory line when a surface is hit. Added a custom cursor and an explosion icon at where the bomb is predicted to land. Created a hand-drawn sprite for the bomb.</div>
+                    <img class="logImages" src="images/LogImages/6-13.png">
+
+                    <p id="updateDates">6-10-2022</p>
+                    <div id="updateDetails">Created a bomb trajectory line.</div>
+                    <img class="logImages" src="images/LogImages/6-10.png">
+
+                    <p id="updateDates">6-9-2022</p>
+                    <div id="updateDetails">Remade website looks. Unified “bomb” themes between the game and the website.</div>
+                    <img class="logImages" src="images/LogImages/6-9(1).png">
+                    <img class="logImages" src="images/LogImages/6-9(2).png">
+
+                    <p id="updateDates">6-8-2022</p>
+                    <div id="updateDetails">Added the main combat system to the game. The player can now click to throw a bomb that explodes upon impact. Actually filled in the update log with current progress. Spruced up the game website with a new color palette and a wave
+                        transition (with SVG), courtesy of Haikei.</div>
+                    <img class="logImages" src="images/LogImages/6-8(1).png">
+                    <img class="logImages" src="images/LogImages/6-8(2).png">
+                    <img class="logImages" src="images/LogImages/6-8(3).png">
+                    <img class="logImages" src="images/LogImages/6-8(4).png">
+
+                    <p id="updateDates">6-7-2022</p>
+                    <div id="updateDetails">Created a basic layout for this website. Working update log created (what you're looking at now).
+                    </div>
+                    <img class="logImages" src="images/LogImages/6-7(1).png">
+                    <img class="logImages" src="images/LogImages/6-7(2).png">
+
+                    <p id="updateDates">6-6-2022</p>
+                    <div id="updateDetails">Updated camera control. Users can now pan the camera towards where the user moves the cursor. Camera location is also affected by the player's velocity.
+                    </div>
+                    <img class="logImages" src="images/LogImages/6-6(1).png">
+                    <img class="logImages" src="images/LogImages/6-6(2).png">
+                    <img class="logImages" src="images/LogImages/6-6(3).png">
+
+                    <p id="updateDates">6-3-2022</p>
+                    <div id="updateDetails">Changed the player's shape from a capsule to a rectangle. Added jumping! Took inspiration from Celeste and included “coyote” frames to jump timing, meaning you can still jump a few frames after you walk off an edge. Added “Mario” jump
+                        mechanics (ie. you fall faster than you jump and the apex of your jump depends on how long you hold the spacebar).
+                        <div class="leftAlignArea">
+                            <p>Bugs:</p>
+                            <ul>
+                                <li>The player would stick to walls if they “walked” into them mid-air.</li>
+                                <li>The player fell EXTREMELY slowly.</li>
+                            </ul>
+                            <p>Fixes:</p>
+                            <ul>
+                                <li>Adding a physics material to the player that had 0 friction prevented wall-sticking.</li>
+                                <li>Changed setting vertical velocity of player to 0 every fixed update to setting the vertical velocity to itself, allowing gravity to work unhindered.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <img class="logImages" src="images/LogImages/6-3(1).png">
+                    <img class="logImages" src="images/LogImages/6-3(2).png">
+
+                    <p id="updateDates">6-2-2022</p>
+                    <div id="updateDetails">Created a game website. Established a .html, .js, and a .css file. Linked both .js and .css to the .html file. Aiming to format the website in a way so I can embed the Unity game into it. Played around a bit with element ids, classes,
+                        css styling, and buttons. Planned out website in Google Slides: <a class="logHyperlinks" href="https://docs.google.com/presentation/d/1QI1Pq8yHxpQbUjsK92xO5wyORP1QN4CUEwbJ0Yidc2I/edit?usp=sharing">GameWebsiteRoughDraft</a></div>
+                    <p id="updateDates">6-1-2022</p>
+                    <div id="updateDetails">Opened a new Unity project, created the ground, two walls, and a capsule (player). Added Rigidbody2D (physics) and a hitbox for the player. Created a player script and added horizontal movement (using Rigidbody.MovePosition). Froze
+                        player rotation. Added input to control horizontal movement (Using Input.GetAxisRaw). Created a camera script; camera now follows the player on both X- and Y-axes (Using Transform).</div>
+                    <img class="logImages" src="images/LogImages/6-1(1).png">
+                    <img class="logImages" src="images/LogImages/6-1(2).png">
+
+                </div>
+            </div>
+        </div>
+
+        <p id="credits">This website and the accompanying game were both originally made by Andre Lee as a summer project with thanks to ID Tech instructors Zachary Rodriguez and YuXiang Dong for their help on the website. Contact me at andrelee2005@gmail.com</p>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
